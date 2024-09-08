@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>React Subscription Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f4f4f9;
+      }
+      .container {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 40px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .container img {
+        width: 80px;
+        margin-bottom: 20px;
+      }
+      .container h2 {
+        font-size: 28px;
+        margin: 0 0 10px;
+        color: #333;
+      }
+      .container p {
+        color: #666;
+        font-size: 16px;
+        margin-bottom: 30px;
+      }
+      .input-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+      input {
+        padding: 10px;
+        width: 200px;
+        border-radius: 30px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+      }
+      button {
+        padding: 10px 20px;
+        border: none;
+        background-color: #4CAF50;
+        color: white;
+        font-size: 16px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- React and Babel libraries -->
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      function SubscribeForm() {
+        // Event handler for the subscribe button
+        const handleSubmit = () => {
+          alert('Thank you for subscribing!');
+        };
+
+        return (
+          <React.Fragment>
+            <div className="container">
+              <img src="https://image.similarpng.com/very-thumbnail/2020/08/Opened-envelope-with-note-paper-vector-PNG.png" alt="Envelope Icon" />
+              <h2>SUBSCRIBE</h2>
+              <p>Subscribe to our newsletter & stay up to date!</p>
+              <div className="input-container">
+                <input type="email" placeholder="john@doe.net" />
+                <button onClick={handleSubmit}>Subscribe</button>
+              </div>
+            </div>
+          </React.Fragment>
+        );
+      }
+
+      // Render the SubscribeForm component inside the root div
+      ReactDOM.render(<SubscribeForm />, document.getElementById('root'));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>React Fragment Example</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      
+      function App() {
+        
+        const handleClick = () => {
+          alert('Hello');
+        };
+
+        const divStyle = {
+          padding: '20px',
+          border: '1px solid #ccc',
+          borderRadius: '10px',
+          textAlign: 'center',
+          margin: '20px',
+          backgroundColor: '#f9f9f9',
+        };
+
+        return (
+          <React.Fragment>
+            
+            <p>React is a JavaScript library</p>
+
+           
+            <div className="main" style={divStyle}>
+              <p>Click the below button to alert 'Hello'</p>
+              <button onClick={handleClick}>Alert Hello</button>
+            </div>
+          </React.Fragment>
+        );
+      }
+
+      
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+  </body>
+</html>
